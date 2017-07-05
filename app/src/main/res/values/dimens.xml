@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="paddingCard">8dp</dimen>
+    <dimen name="paddingComponentes">10dp</dimen>
+    <dimen name="cardText">20sp</dimen>
+    <dimen name="cardImage">10sp</dimen>
+    <dimen name="margenFAB">12dp</dimen>
+
+    <!-- elevaciones -->
+    <dimen name="elevacionToolBar">4dp</dimen>
+    <dimen name="elevacionRaisedButton">15dp</dimen>
+</resources>
