@@ -30,10 +30,6 @@ public class MainActivity extends AppCompatActivity {
         //Agregamos el FAB para futuras funcionalidades
         agregarFAB();
 
-        //Configurando el Toolbar que usaremos en la app
-        //Toolbar miToolbar = (Toolbar) findViewById(R.id.miToolbar);
-        //setSupportActionBar(miToolbar);
-
         //Iniciando el RecyclerView
         listaMascotas = (RecyclerView) findViewById(R.id.rvMascotas);
         LinearLayoutManager llm = new LinearLayoutManager(this);
@@ -42,8 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
         inicializarListaMascotas();
         inicializarAdaptador();
-
-        //Menu boton = (Menu) findViewById(R.menu.iFavoritos);
     }
 
     //Correr el adaptador
