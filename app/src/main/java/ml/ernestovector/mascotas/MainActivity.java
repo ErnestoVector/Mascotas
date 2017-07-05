@@ -76,6 +76,9 @@ public class MainActivity extends AppCompatActivity {
         //en nuestro caso hay 2 botones (favoritos y opciones)
         switch(item.getItemId()){
             case R.id.iFavoritos:
+                //Agregamos un mensaje Toast para visualizar el click al icono
+                Toast.makeText(getBaseContext(),"click en icono Favoritos", Toast.LENGTH_SHORT).show();
+
                 //Iniciamos el intent
                 Intent i = new Intent(MainActivity.this, favoritos.class);
                 startActivity(i);
