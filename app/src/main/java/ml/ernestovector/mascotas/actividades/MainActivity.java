@@ -2,10 +2,12 @@ package ml.ernestovector.mascotas.actividades;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,56 +15,42 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import ml.ernestovector.mascotas.pojo.Mascota;
-import ml.ernestovector.mascotas.adapter.MascotaAdaptador;
+import ml.ernestovector.mascotas.adapter.PageAdapter;
+import ml.ernestovector.mascotas.fragment.MascotaFragment;
 import ml.ernestovector.mascotas.R;
+import ml.ernestovector.mascotas.fragment.PerfilFragment;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<Mascota> mascotas;
-    private RecyclerView listaMascotas;
-    public MascotaAdaptador adaptador;
+//Atributos-----------------------------------------------------------------------------------------
+    private Toolbar toolbar;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
 
-
+//Metodo on create----------------------------------------------------------------------------------
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         //Agregamos el FAB para futuras funcionalidades
         agregarFAB();
 
-        //Iniciando el RecyclerView
-        listaMascotas = (RecyclerView) findViewById(R.id.rvMascotas);
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        llm.setOrientation(LinearLayoutManager.VERTICAL);
-        listaMascotas.setLayoutManager(llm);
+        //Conectamos el codigo con los elementos de la actividad
+        toolbar   = (Toolbar)   findViewById(R.id.toolbar);
+        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+        setUpViewPager();
 
-        inicializarListaMascotas();
-        inicializarAdaptador();
-    }
+        if (toolbar != null)
+        {
+            setSupportActionBar(toolbar);
+        }
 
-    //Correr el adaptador
-    public void inicializarAdaptador(){
-        adaptador = new MascotaAdaptador(mascotas, this);
-        listaMascotas.setAdapter(adaptador);
-    }
-
-    //Crear los objetos en la lista mascotas
-    public void inicializarListaMascotas(){
-        mascotas = new ArrayList<Mascota>();
-
-        mascotas.add(new Mascota(R.drawable.perro3,   "Gastón",   "5"));
-        mascotas.add(new Mascota(R.drawable.perro2,   "Puppy",    "3"));
-        mascotas.add(new Mascota(R.drawable.perro1,   "Kraken",   "4"));
-        mascotas.add(new Mascota(R.drawable.hamster3, "Canela",   "2"));
-        mascotas.add(new Mascota(R.drawable.hamster2, "Nube",     "5"));
-        mascotas.add(new Mascota(R.drawable.hamster1, "Travieso", "5"));
-        mascotas.add(new Mascota(R.drawable.gato2,    "Blacky",   "3"));
-        mascotas.add(new Mascota(R.drawable.gato1,    "Karen",    "4"));
 
     }
 
-//Inicializando el menu en la MainActivity
+//Inicializando el menu en la MainActivity----------------------------------------------------------
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -104,7 +92,33 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-//Le da funcion al FAB de la camara
+//Le damos vida a los fragments en el MainActivity--------------------------------------------------
+    private ArrayList<Fragment> agregarFragments(){
+        //Creamos una lista de Fragments
+        ArrayList<Fragment> fragments = new ArrayList<>();
+
+        //Inicializamos los fragments en la lista
+        fragments.add(new MascotaFragment());
+        fragments.add(new PerfilFragment());
+
+        //regresamos la lista con los fragments
+        return fragments;
+    }
+
+    private void setUpViewPager(){
+        //Obtenemos el soporte y la lista de fragments en el view pager
+        viewPager.setAdapter(new PageAdapter(getSupportFragmentManager(), agregarFragments()));
+
+        //Agregamos los fragments al tabLayout
+        tabLayout.setupWithViewPager(viewPager);
+
+        //Agregamos los iconos a los Tabs
+        tabLayout.getTabAt(0).setIcon(R.drawable.camera);
+        tabLayout.getTabAt(1).setIcon(R.drawable.star);
+
+    }
+
+//Le da funcion al FAB de la camara-----------------------------------------------------------------
     public void agregarFAB(){
         FloatingActionButton miFAB = (FloatingActionButton) findViewById(R.id.fabCamara);
         //Le damos una accion para realizar

@@ -21,4 +21,7 @@
     <string name="bio">Actualmente cursando el tercer módulo de los cursos de Android
                        en la plataforma de Coursera, impartido por Anahí Salgado
                        por parte de la UNAM</string>
+
+    <!-- Fragment Perfil -->
+    <string name="nombre_mascota">Gastón</string>
 </resources>

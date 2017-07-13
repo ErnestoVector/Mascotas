@@ -6,11 +6,11 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:supportsRtl="true">
         <activity
             android:name=".actividades.MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,18 +20,21 @@
         <activity
             android:name=".actividades.favoritos"
             android:label="Favoritos"
+            android:theme="@style/ToolBarTheme"
             android:parentActivityName=".actividades.MainActivity">
 
         </activity>
         <activity
             android:name=".actividades.Contacto"
             android:label="@string/mContacto"
+            android:theme="@style/ToolBarTheme"
             android:parentActivityName=".actividades.MainActivity">
 
         </activity>
         <activity
             android:name=".actividades.AcercaDe"
             android:label="@string/mAcercaDe"
+            android:theme="@style/ToolBarTheme"
             android:parentActivityName=".actividades.MainActivity">
 
         </activity>

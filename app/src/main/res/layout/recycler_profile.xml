@@ -23,7 +23,7 @@
 
             <!-- Imagen de la mascota -->
             <ImageView
-                android:id="@+id/ivImagenMascota"
+                android:id="@+id/ivImagenMascota2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="@dimen/cardImage"
@@ -35,28 +35,9 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
-                <!-- Icono de hueso vacio -->
-                <ImageButton
-                    android:id="@+id/ibGrayBone"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/bone_gray"/>
-
-                <!-- Nombre de la mascota -->
-                <TextView
-                    android:id="@+id/tvNombreMascota"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="@string/mascota_muestra"
-                    android:gravity="center"
-                    android:padding="@dimen/paddingComponentes"
-                    android:textSize="@dimen/cardText"
-                    android:layout_weight="2"
-                    android:textStyle="bold" />
-
                 <!-- Raiting actual de la mascota -->
                 <TextView
-                    android:id="@+id/tvRatingMascota"
+                    android:id="@+id/tvRatingMascota2"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="@string/raiting_muestra"
@@ -67,7 +48,7 @@
 
                 <!-- Icono de hueso de color -->
                 <ImageView
-                    android:id="@+id/ivColorBone"
+                    android:id="@+id/ivColorBone2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.2"

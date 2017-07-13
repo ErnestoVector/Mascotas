@@ -6,11 +6,19 @@
     <dimen name="cardImage">10sp</dimen>
     <dimen name="margenFAB">12dp</dimen>
 
+    <!-- CardView -->
+    <dimen name="card_corner_radius">6dp</dimen>
+
     <!-- elevaciones -->
     <dimen name="elevacionToolBar">4dp</dimen>
     <dimen name="elevacionRaisedButton">15dp</dimen>
+    <dimen name="elevacionPerfil">10dp</dimen>
 
     <!-- Texto de Acerca de: -->
     <dimen name="desarrollador">22sp</dimen>
     <dimen name="bio">18sp</dimen>
+
+    <!-- Imagen circular -->
+    <dimen name="ancho_borde">5dp</dimen>
+    <dimen name="tamanio_imagen">150dp</dimen>
 </resources>

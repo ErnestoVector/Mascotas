@@ -14,7 +14,12 @@ public class Mascota {
         this.rate = rate;
     }
 
-//---Getters y Setters------------------------------------------------------------------------------
+    public Mascota(int foto, String rate) {
+        this.foto = foto;
+        this.rate = rate;
+    }
+
+    //---Getters y Setters------------------------------------------------------------------------------
 
     public int getFoto() {
         return foto;
