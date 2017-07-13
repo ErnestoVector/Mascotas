@@ -3,17 +3,27 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
+    tools:context=".actividades.MainActivity">
 
     <item
         android:id="@+id/iFavoritos"
-        android:title="@string/favoritos"
+        android:title="@string/mFavoritos"
         android:icon="@drawable/star"
-        app:showAsAction="always"/>
+        app:showAsAction="always">
+    </item>
 
     <item
-        android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        app:showAsAction="never"/>
+        android:id="@+id/mContacto"
+        android:title="@string/mContacto"
+        android:orderInCategory="100"
+        app:showAsAction="never">
+    </item>
+
+    <item
+        android:id="@+id/mAcerca_de"
+        android:title="@string/mAcercaDe"
+        android:orderInCategory="101"
+        app:showAsAction="never">
+    </item>
 
 </menu>

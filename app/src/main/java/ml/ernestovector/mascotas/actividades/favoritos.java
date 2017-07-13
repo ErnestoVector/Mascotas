@@ -1,4 +1,4 @@
-package ml.ernestovector.mascotas;
+package ml.ernestovector.mascotas.actividades;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
+
+import ml.ernestovector.mascotas.pojo.Mascota;
+import ml.ernestovector.mascotas.adapter.MascotaAdaptador;
+import ml.ernestovector.mascotas.R;
 
 public class favoritos extends AppCompatActivity {
 

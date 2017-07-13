@@ -1,4 +1,4 @@
-package ml.ernestovector.mascotas;
+package ml.ernestovector.mascotas.pojo;
 
 public class Mascota {
 

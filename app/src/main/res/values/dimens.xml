@@ -9,4 +9,8 @@
     <!-- elevaciones -->
     <dimen name="elevacionToolBar">4dp</dimen>
     <dimen name="elevacionRaisedButton">15dp</dimen>
+
+    <!-- Texto de Acerca de: -->
+    <dimen name="desarrollador">22sp</dimen>
+    <dimen name="bio">18sp</dimen>
 </resources>

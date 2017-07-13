@@ -1,20 +1,21 @@
-package ml.ernestovector.mascotas;
+package ml.ernestovector.mascotas.actividades;
 
-import android.content.ClipData;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import ml.ernestovector.mascotas.pojo.Mascota;
+import ml.ernestovector.mascotas.adapter.MascotaAdaptador;
+import ml.ernestovector.mascotas.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -76,15 +77,25 @@ public class MainActivity extends AppCompatActivity {
         //en nuestro caso hay 2 botones (favoritos y opciones)
         switch(item.getItemId()){
             case R.id.iFavoritos:
-                //Agregamos un mensaje Toast para visualizar el click al icono
-                Toast.makeText(getBaseContext(),"click en icono Favoritos", Toast.LENGTH_SHORT).show();
-
                 //Iniciamos el intent
                 Intent i = new Intent(MainActivity.this, favoritos.class);
                 startActivity(i);
                 return true;
 
-            case R.id.action_settings:
+            case R.id.mContacto:
+                //Añadimos un Toast para visualizar el toque a contactos
+                Toast.makeText(getBaseContext(),getResources().getString(R.string.mContacto), Toast.LENGTH_SHORT).show();
+
+                //Iniciamos el intent a la actividad Contactos
+                Intent iContacto = new Intent(MainActivity.this, Contacto.class);
+                startActivity(iContacto);
+                return true;
+
+            case R.id.mAcerca_de:
+                //Añadimos un Toast para visualizar el toque a Acerca de
+                Toast.makeText(getBaseContext(),getResources().getString(R.string.mAcercaDe), Toast.LENGTH_SHORT).show();
+                Intent iAcercaDe = new Intent(MainActivity.this, AcercaDe.class);
+                startActivity(iAcercaDe);
                 return true;
 
             default:

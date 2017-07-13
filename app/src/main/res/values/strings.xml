@@ -1,8 +1,24 @@
 <resources>
     <string name="app_name">Mascotas</string>
+
+    <!-- Card View -->
     <string name="mascota_muestra">Nombre Mascota</string>
     <string name="raiting_muestra">4</string>
-    <string name="activity_favoritos">Favoritos</string>
-    <string name="action_settings">Opciones</string>
-    <string name="favoritos">Favoritos</string>
+
+    <!-- Menu de opciones -->
+    <string name="mContacto">Contacto</string>
+    <string name="mAcercaDe">Acerca de</string>
+    <string name="mFavoritos">Favoritos</string>
+
+    <!-- Actividad Contacto -->
+    <string name="hint_nombre">Nombre Completo</string>
+    <string name="hint_correo">Correo</string>
+    <string name="hint_mensaje">Introduce tu mensaje</string>
+    <string name="button_send">Enviar Comentario</string>
+
+    <!-- Actividad Acerca de -->
+    <string name="desarrollador">Desarrollador: Ernesto Vector</string>
+    <string name="bio">Actualmente cursando el tercer módulo de los cursos de Android
+                       en la plataforma de Coursera, impartido por Anahí Salgado
+                       por parte de la UNAM</string>
 </resources>

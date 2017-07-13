@@ -9,4 +9,11 @@
         <item name="android:textColorPrimary">@android:color/background_light</item>
     </style>
 
+    <!-- Boton de enviar -->
+    <style name="bEnviar" parent="Theme.AppCompat.Light">
+        <item name="colorButtonNormal">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorBlanco</item>
+    </style>
+
 </resources>

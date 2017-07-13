@@ -1,4 +1,4 @@
-package ml.ernestovector.mascotas;
+package ml.ernestovector.mascotas.adapter;
 
 import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +11,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import ml.ernestovector.mascotas.R;
+import ml.ernestovector.mascotas.pojo.Mascota;
 
 public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MascotaViewHolder>{
 
