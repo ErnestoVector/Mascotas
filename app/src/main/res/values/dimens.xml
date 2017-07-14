@@ -20,5 +20,5 @@
 
     <!-- Imagen circular -->
     <dimen name="ancho_borde">5dp</dimen>
-    <dimen name="tamanio_imagen">150dp</dimen>
+    <dimen name="tamanio_imagen">125dp</dimen>
 </resources>

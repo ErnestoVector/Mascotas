@@ -11,10 +11,11 @@
     <string name="mFavoritos">Favoritos</string>
 
     <!-- Actividad Contacto -->
-    <string name="hint_nombre">Nombre Completo</string>
+    <string name="hint_nombre">Asunto Correo (Nombre)</string>
     <string name="hint_correo">Correo</string>
     <string name="hint_mensaje">Introduce tu mensaje</string>
     <string name="button_send">Enviar Comentario</string>
+    <string name="message_send">Mensaje correctamente enviado</string>
 
     <!-- Actividad Acerca de -->
     <string name="desarrollador">Desarrollador: Ernesto Vector</string>
