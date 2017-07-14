@@ -34,8 +34,8 @@
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvPerfil"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/tvNombrePerfil">
 
     </android.support.v7.widget.RecyclerView>

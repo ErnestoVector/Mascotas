@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-//Inicializamos los botones del menu (se les asignan tareas a cada uno
+//Inicializamos los botones del menu (se les asignan tareas a cada uno)
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         //Identificamos el icono del menu seleccionado

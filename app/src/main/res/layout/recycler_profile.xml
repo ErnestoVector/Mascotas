@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="@dimen/paddingCard">
 
     <!-- Declarando la tarjeta -->
     <android.support.v7.widget.CardView
         android:id="@+id/cvCard"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:cardCornerRadius="@dimen/card_corner_radius"
         android:layout_alignParentTop="true"
@@ -24,16 +25,18 @@
             <!-- Imagen de la mascota -->
             <ImageView
                 android:id="@+id/ivImagenMascota2"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/cardImage"
+                android:adjustViewBounds="true"
                 android:src="@drawable/brasil" />
 
             <!-- Inician los íconos de la tarjeta-->
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_gravity="center">
 
                 <!-- Raiting actual de la mascota -->
                 <TextView
@@ -43,7 +46,6 @@
                     android:text="@string/raiting_muestra"
                     android:gravity="center"
                     android:padding="@dimen/paddingComponentes"
-                    android:layout_weight="0.2"
                     android:textSize="@dimen/cardText" />
 
                 <!-- Icono de hueso de color -->
@@ -51,7 +53,6 @@
                     android:id="@+id/ivColorBone2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.2"
                     android:src="@drawable/bone_color" />
 
             </LinearLayout>
